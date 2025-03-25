@@ -1,0 +1,930 @@
+{
+	"info": {
+		"_postman_id": "574801a7-354e-4d00-80f5-27bb6c90ec0e",
+		"name": "ALTAVITA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30569159",
+		"_collection_link": "https://www.postman.com/martian-spaceship-430640/workspace/new-ws/collection/30569159-574801a7-354e-4d00-80f5-27bb6c90ec0e?action=share&source=collection_link&creator=30569159"
+	},
+	"item": [
+		{
+			"name": "Поиск товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true,
+					"content-type": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*",
+						"disabled": true
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+						"disabled": true
+					},
+					{
+						"key": "origin",
+						"value": "https://altaivita.ru",
+						"disabled": true
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i",
+						"disabled": true
+					},
+					{
+						"key": "referer",
+						"value": "https://altaivita.ru/",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0",
+						"disabled": true
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\"",
+						"disabled": true
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty",
+						"disabled": true
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors",
+						"disabled": true
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "cross-site",
+						"disabled": true
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://sort.diginetica.net/search?st=мумие&apiKey=QKP17U2G8P&strategy=advanced_xname,zero_queries&fullData=true&withCorrection=true&withFacets=true&treeFacets=true&regionId=global&useCategoryPrediction=false&size=20&offset=0&showUnavailable=true&unavailableMultiplier=0.2&preview=false&withSku=false&sort=DEFAULT",
+					"protocol": "https",
+					"host": [
+						"sort",
+						"diginetica",
+						"net"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "мумие"
+						},
+						{
+							"key": "apiKey",
+							"value": "QKP17U2G8P"
+						},
+						{
+							"key": "strategy",
+							"value": "advanced_xname,zero_queries"
+						},
+						{
+							"key": "fullData",
+							"value": "true"
+						},
+						{
+							"key": "withCorrection",
+							"value": "true"
+						},
+						{
+							"key": "withFacets",
+							"value": "true"
+						},
+						{
+							"key": "treeFacets",
+							"value": "true"
+						},
+						{
+							"key": "regionId",
+							"value": "global"
+						},
+						{
+							"key": "useCategoryPrediction",
+							"value": "false"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "showUnavailable",
+							"value": "true"
+						},
+						{
+							"key": "unavailableMultiplier",
+							"value": "0.2"
+						},
+						{
+							"key": "preview",
+							"value": "false"
+						},
+						{
+							"key": "withSku",
+							"value": "false"
+						},
+						{
+							"key": "sort",
+							"value": "DEFAULT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление в корзину из результатов поиска",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _dvs=0:m8n9gde4:35L3hdZaJwqmA7ZfYqZ2oyAtwqn190Uk; smartbanner_used=close; DIGI_CARTID=45488827383; digi_uc=|v:174283:675|s:174283:675; dSesn=9f9612e1-84e4-ea98-8475-99f44bb15fb6; _ga_2JB65Y3D22=GS1.1.1742832470.2.1.1742838989.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "product_id=3900&this_listId=&quantity=1&LANG_key=ru&S_wh=1&S_CID=5f63b647215ba1f0edef19c0f1ae85fa&S_cur_code=rub&S_koef=1&S_hint_code=&S_customerID=",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/add_products_to_cart_from_preview.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"add_products_to_cart_from_preview.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление в корзину из результатов поиска Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "product_id=675&this_listId=&quantity=1&LANG_key=ru&S_wh=1&S_CID=5f63b647215ba1f0edef19c0f1ae85fa&S_cur_code=rub&S_koef=1&S_hint_code=&S_customerID=",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/add_products_to_cart_from_preview.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"add_products_to_cart_from_preview.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Просмотр товаров в корзине",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; _dvs=0:m8n9gde4:35L3hdZaJwqmA7ZfYqZ2oyAtwqn190Uk; searchStartTime=1742845163490; dSesn=47546d56-fd7a-e75b-5b89-2a1590daa301; digi_uc=|v:174284:675|s:174284:675; DIGI_CARTID=15613565612; _ga_2JB65Y3D22=GS1.1.1742843114.3.1.1742845327.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "LANG_key=ru&S_hint_code=&S_cur_code=rub&S_CID=5f63b647215ba1f0edef19c0f1ae85fa",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/ajax_get_cart_contents.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"ajax_get_cart_contents.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Информация о товаре",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"https://sort.diginetica.net/search?st=мумие&apiKey=QKP17U2G8P&strategy=advanced_xname,zero_queries&fullData=true&withCorrection=true&withFacets=true&treeFacets=true&regionId=global&useCategoryPrediction=false&size=20&offset=0&showUnavailable=true&unavailableMultiplier=0.2&preview=false&withSku=false&sort=DEFAULT"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://altaivita.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://altaivita.ru/product/mumiyo-altajskoe/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; DIGI_CARTID=37368041689; dSesn=3cab164b-8208-c681-602b-03b1f33f39d7; _dvs=0:m8n9gde4:35L3hdZaJwqmA7ZfYqZ2oyAtwqn190Uk; digi_uc=|v:174284:675|s:174283:675; _ga_2JB65Y3D22=GS1.1.1742843114.3.1.1742843380.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "action=ecom_link_products_cart&productID=675&LANG_key=ru&S_wh=1&S_CID=5f63b647215ba1f0edef19c0f1ae85fa&S_cur_code=rub&S_koef=1&S_hint_code=&S_customerID=",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/ajax/ajax_ecommerce/ajax_ecommerce.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"ajax",
+						"ajax_ecommerce",
+						"ajax_ecommerce.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление товара в корзину из информации о товаре",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; DIGI_CARTID=37368041689; dSesn=3cab164b-8208-c681-602b-03b1f33f39d7; _dvs=0:m8n9gde4:35L3hdZaJwqmA7ZfYqZ2oyAtwqn190Uk; digi_uc=|v:174284:675|s:174283:675; _ga_2JB65Y3D22=GS1.1.1742843114.3.1.1742843736.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "product_id=675&this_listId=product_cart&parent_product=675&LANG_key=ru&S_wh=1&S_CID=5f63b647215ba1f0edef19c0f1ae85fa&S_cur_code=rub&S_koef=1&quantity=1&S_hint_code=&S_customerID=",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/add_products_to_cart_from_preview.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"add_products_to_cart_from_preview.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Просмотр товаров в корзине",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; _dvs=0:m8n9gde4:35L3hdZaJwqmA7ZfYqZ2oyAtwqn190Uk; searchStartTime=1742845163490; dSesn=47546d56-fd7a-e75b-5b89-2a1590daa301; digi_uc=|v:174284:675|s:174284:675; DIGI_CARTID=15613565612; _ga_2JB65Y3D22=GS1.1.1742843114.3.1.1742845327.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "LANG_key=ru&S_hint_code=&S_cur_code=rub&S_CID=5f63b647215ba1f0edef19c0f1ae85fa",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/ajax_get_cart_contents.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"ajax_get_cart_contents.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Уменьшение количества товара в корзине из результатов поиска",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; dSesn=266a4d7e-c272-cb26-acb3-c7391e703d07; _dvs=0:m8nj94du:fZdKZkQGFZAXBEDcR2horgCiH2L3xd3N; searchStartTime=1742848960462; digi_uc=|v:174284:675|s:174284:5648:6777:3593:3821!174285:675; DIGI_CARTID=15990112213; _ga_2JB65Y3D22=GS1.1.1742848927.4.1.1742850597.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "product_id=675&this_listId=&LANG_key=ru&S_wh=1&S_CID=5f63b647215ba1f0edef19c0f1ae85fa&S_cur_code=rub&S_koef=1&S_hint_code=&S_customerID=",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/delete_products_from_cart_preview_by_productID.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"delete_products_from_cart_preview_by_productID.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Уменьшение количества товара в корзине из информации о товаре",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://altaivita.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://altaivita.ru/product/mumiyo-altajskoe/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; _dvs=0:m8nj94du:fZdKZkQGFZAXBEDcR2horgCiH2L3xd3N; DIGI_CARTID=15990112213; searchStartTime=1742851376298; dSesn=c873ec39-4887-612d-7aed-c18be90fc207; digi_uc=|v:174285:675|s:174284:5648:6777:3593:3821^!174285:675; _ga_2JB65Y3D22=GS1.1.1742848927.4.1.1742851427.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "product_id=675&this_listId=product_cart&parent_product=675&LANG_key=ru&S_wh=1&S_CID=5f63b647215ba1f0edef19c0f1ae85fa&S_cur_code=rub&S_koef=1&quantity=1&S_hint_code=&S_customerID=",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/delete_products_from_cart_preview_by_productID.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"delete_products_from_cart_preview_by_productID.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Просмотр товаров в корзине",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; _dvs=0:m8n9gde4:35L3hdZaJwqmA7ZfYqZ2oyAtwqn190Uk; searchStartTime=1742845163490; dSesn=47546d56-fd7a-e75b-5b89-2a1590daa301; digi_uc=|v:174284:675|s:174284:675; DIGI_CARTID=15613565612; _ga_2JB65Y3D22=GS1.1.1742843114.3.1.1742845327.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "LANG_key=ru&S_hint_code=&S_cur_code=rub&S_CID=5f63b647215ba1f0edef19c0f1ae85fa",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/ajax_get_cart_contents.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"ajax_get_cart_contents.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара из корзины",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://altaivita.ru"
+					},
+					{
+						"key": "Referer",
+						"value": "https://altaivita.ru/cart/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; _dvs=0:m8nj94du:fZdKZkQGFZAXBEDcR2horgCiH2L3xd3N; digi_uc=|v:174285:675|s:174284:5648:6777:3593:3821!174285:675; dSesn=0b0a89b4-15af-e3f7-c119-c754c1b7a4be; DIGI_CARTID=44061073865; _ga_2JB65Y3D22=GS1.1.1742848927.4.1.1742853383.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "product_id=675&LANG_key=ru&S_wh=1&S_CID=5f63b647215ba1f0edef19c0f1ae85fa&S_cur_code=rub&S_koef=1&S_hint_code=&S_customerID=",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/delete_products_from_cart_preview.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"delete_products_from_cart_preview.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Просмотр товаров в корзине",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=9b6s2ohsrnarinnq3r5sbhiek5; CID=5f63b647215ba1f0edef19c0f1ae85fa; site_countryID=247; site_country_name=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; _ga=GA1.1.1758161004.1742807214; _ym_uid=1742807215698579177; _ym_d=1742807215; _ym_isad=1; _userGUID=0:m8muf0g9:McIdYY5Gl783CSLcz5YQL5m3ybiKjnZj; smartbanner_used=close; _dvs=0:m8n9gde4:35L3hdZaJwqmA7ZfYqZ2oyAtwqn190Uk; searchStartTime=1742845163490; dSesn=47546d56-fd7a-e75b-5b89-2a1590daa301; digi_uc=|v:174284:675|s:174284:675; DIGI_CARTID=15613565612; _ga_2JB65Y3D22=GS1.1.1742843114.3.1.1742845327.0.0.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "LANG_key=ru&S_hint_code=&S_cur_code=rub&S_CID=5f63b647215ba1f0edef19c0f1ae85fa",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{engine}}/{{cart}}/ajax_get_cart_contents.php",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{engine}}",
+						"{{cart}}",
+						"ajax_get_cart_contents.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {\r",
+					"    pm.response.to.have.status(200);\r",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "CID",
+			"value": "5f63b647215ba1f0edef19c0f1ae85fa",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "https://altaivita.ru",
+			"type": "string"
+		},
+		{
+			"key": "engine",
+			"value": "engine",
+			"type": "string"
+		},
+		{
+			"key": "cart",
+			"value": "cart",
+			"type": "string"
+		}
+	]
+}
