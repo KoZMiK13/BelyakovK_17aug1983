@@ -34,9 +34,3 @@ WHERE id_author NOT IN (
     SELECT id_author 
     FROM book
 );
-
-
-
-
-
-
